@@ -1,0 +1,20 @@
+Hallazgos y Conclusiones - Prueba E2E SauceDemo
+
+1. Herramienta utilizada:
+Se seleccionó Playwright como framework de automatización debido a su rapidez, su arquitectura moderna, la facilidad para manejar asincronía de forma nativa sin timeouts excesivos y la generación automática de reportes.
+
+2. Identificación de Elementos (Selectores):
+El sitio www.saucedemo.com posee un diseño enfocado en facilitar las pruebas (Testability). La mayoría de los elementos importantes para el flujo cuentan con atributos específicos como `data-test`, lo cual facilita la creación de selectores robustos e independientes a cambios en las clases CSS o en la estructura HTML (por ejemplo, `[data-test="add-to-cart-sauce-labs-backpack"]`).
+
+3. Flujo Validado:
+Se automatizó y validó exitosamente el Happy Path de la compra:
+- Login exitoso.
+- Adición al carrito y su validación (asegurando el estado y la persistencia de productos).
+- Completado de formulario y sumario de compra.
+- Pantalla final de éxito "Thank you for your order!".
+
+4. Tiempos de ejecución:
+Las pruebas con Playwright en su modalidad Headless son muy eficientes y corren en pocos segundos. Se ha configurado el proyecto para guardar capturas, trazas y video ante cualquier posible fallo, garantizando mejor observabilidad.
+
+5. Conclusión General:
+La automatización UI aporta un inmenso valor para validar flujos críticos como el proceso de pago (Checkout E2E). Herramientas como Playwright facilitan la integración continua, haciendo del Testing un proceso confiable y mantenible.
